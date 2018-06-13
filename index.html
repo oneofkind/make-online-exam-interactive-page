@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXAM</title>
+    <link rel="shortcut icon" type="image/png" href="lib/jasmine-3.1.0/jasmine_favicon.png">
+    <link rel="stylesheet" href="lib/jasmine-3.1.0/jasmine.css">
+
+    <script src="lib/jasmine-3.1.0/jasmine.js"></script>
+    <script src="lib/jasmine-3.1.0/jasmine-html.js"></script>
+    <script src="lib/jasmine-3.1.0/boot.js"></script>
+    <style>
+        .container {
+            max-width: 840px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        li label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="container" id="uml-form">
+        <h1>统一建模语言理论测试</h1>
+        <div>
+            <span>考试科目</span>
+            <span>UML</span>
+            <span>时间</span>
+            <span>100分钟</span>
+            <span>得分</span>
+            <span>100</span>
+        </div>
+        <div>
+            <label for="class">班级</label>
+            <input type="text">
+            <label for="student-id">学号</label>
+            <input type="text">
+            <label for="name">姓名</label>
+            <input type="text">
+        </div>
+        <section>
+            <h3>填空题</h3>
+            <div>
+                <ol>
+                    <li>
+                        <div>UML的中文全称是
+                            <input type="text" name="1-1" placeholder="统一建模语言">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            对象最突出的特征是
+                            <input type="text" name="1-2" placeholder="封装性、继承性、多态性">
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section>
+            <h3>单选题</h3>
+            <div>
+                <ol>
+                    <li>
+                        <div>
+                            UML与软件工程的关系是
+                            <label>
+                                <input type="radio" name="2-1">UML就是软件工程</label>
+                            <label>
+                                <input type="radio" name="2-1">UML参加到软件开发工程中的几个阶段</label>
+                            <label>
+                                <input type="radio" name="2-1">UML与软件工程无关</label>
+                            <label>
+                                <input type="radio" name="2-1">UML是软件工程的一部分</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            JAVA语言支持
+                            <label>
+                                <input type="radio" name="2-2">单继承</label>
+                            <label>
+                                <input type="radio" name="2-2">多继承</label>
+                            <label>
+                                <input type="radio" name="2-2">单继承和多继承都支持</label>
+                            <label>
+                                <input type="radio" name="2-2">单继承和多继承都不支持</label>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h3>多选题</h3>
+            <div>
+                <ol>
+                    <li>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="tdd-example">4</label>
+                            <label>
+                                <input type="checkbox" name="tdd-example">4</label>
+                            <label>
+                                <input type="checkbox" name="tdd-example">4</label>
+                            <label>
+                                <input type="checkbox" name="tdd-example">4</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="class-pic">4</label>
+                            <label>
+                                <input type="checkbox" name="class-pic">4</label>
+                            <label>
+                                <input type="checkbox" name="class-pic">4</label>
+                            <label>
+                                <input type="checkbox" name="class-pic">4</label>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h3>判断题</h3>
+            <div>
+                <ol>
+                    <li>
+                        <div>
+                            <input type="radio" name="radio-one">✔️
+                            <input type="radio" name="radio-one">❌
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input type="radio" name="radio-one">✔️
+                            <input type="radio" name="radio-one">❌
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h3>简答题</h3>
+            <div>
+                <ol>
+                    <li>
+                        <div>
+                            <p>
+                                简述什么是模型以及模型的表现形式
+                            </p>
+                            <textarea name="answer" id="answer" cols="120" rows="10" placeholder="模型是对世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体；可以使某种图形；或者是一种数学表达式。"></textarea>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <button type="submit">
+            提交试卷
+        </button>
+    </form>
+
+    <script src="src/main.js"></script>
+    <script src="spec/mainSpec.js"></script>
+    <!-- <script src="spec/main-spec.js"></script> -->
+</body>
+
+</html>

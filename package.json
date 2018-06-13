@@ -16,8 +16,7 @@
   "bugs": {
     "url": "https://github.com/tw-online-quiz/exam-paper/issues"
   },
-  "homepage": "https://school.thoughtworks.cn",
   "devDependencies": {
-    "jasmine": "^2.6.0"
+    "jasmine": "^3.1.0"
   }
 }
