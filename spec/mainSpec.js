@@ -1,12 +1,17 @@
 describe("Main", function () {
-  /*   beforeEach(function(){
-        
-    }) */
-    it('should init',function () {
-        let umlExam = new UmlExam();
-        expect(umlExam.flag).toBe(true);
-        // console.log(umlExam); 
+    let umlExam=new UmlExam();
+    // beforeEach(function () {
+    //     umlExam = 
+    // })
+    it('should init', function () {
+        expect(umlExam.initFlag).toBe(true);
     })
+
+    it('should return score of the examinaition', function () {
+        let result = umlExam.countScore()
+        expect(typeof result).toBe('number')
+    })
+
     // beforeEach(function (done) {
     //     asynctest.init(function () {
     //         done();

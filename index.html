@@ -22,30 +22,49 @@
         li label {
             display: block;
         }
+
+        .exam-info>span {
+            width: 12.5%;
+            display: inline-block;
+        }
+
+        .student-info>label {
+            width: 25%;
+            display: inline-block;
+        }
+        #score{
+            color: red;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 
 <body>
     <form class="container" id="uml-form">
         <h1>统一建模语言理论测试</h1>
-        <div>
+        <div class="exam-info">
             <span>考试科目</span>
             <span>UML</span>
             <span>时间</span>
             <span>100分钟</span>
             <span>得分</span>
-            <span>100</span>
+            <span id="score"></span>
         </div>
-        <div>
-            <label for="class">班级</label>
-            <input type="text">
-            <label for="student-id">学号</label>
-            <input type="text">
-            <label for="name">姓名</label>
-            <input type="text">
+        <div class="student-info">
+            <label for="class">班级
+                <input type="text">
+            </label>
+
+            <label for="student-id">学号
+                <input type="text">
+            </label>
+
+            <label for="name">姓名
+                <input type="text">
+            </label>
         </div>
         <section>
-            <h3>填空题</h3>
+            <h3>填空题(每题10分，共20分)</h3>
             <div>
                 <ol>
                     <li>
@@ -63,33 +82,33 @@
             </div>
         </section>
         <section>
-            <h3>单选题</h3>
+            <h3>单选题(每题10分，共20分)</h3>
             <div>
                 <ol>
                     <li>
-                        <div>
+                        <div id="radio-1">
                             UML与软件工程的关系是
                             <label>
-                                <input type="radio" name="2-1">UML就是软件工程</label>
+                                <input type="radio" name="2-1" data-value="UML就是软件">UML就是软件工程</label>
                             <label>
-                                <input type="radio" name="2-1">UML参加到软件开发工程中的几个阶段</label>
+                                <input type="radio" name="2-1" data-value="UML参加到软件开发工程中的几个阶段">UML参加到软件开发工程中的几个阶段</label>
                             <label>
-                                <input type="radio" name="2-1">UML与软件工程无关</label>
+                                <input type="radio" name="2-1" data-value="UML与软件工程无关">UML与软件工程无关</label>
                             <label>
-                                <input type="radio" name="2-1">UML是软件工程的一部分</label>
+                                <input type="radio" name="2-1" data-value="UML是软件工程的一部分">UML是软件工程的一部分</label>
                         </div>
                     </li>
                     <li>
-                        <div>
+                        <div id="radio-2">
                             JAVA语言支持
                             <label>
-                                <input type="radio" name="2-2">单继承</label>
+                                <input type="radio" name="2-2" data-value="单继承">单继承</label>
                             <label>
-                                <input type="radio" name="2-2">多继承</label>
+                                <input type="radio" name="2-2" data-value="多继承">多继承</label>
                             <label>
-                                <input type="radio" name="2-2">单继承和多继承都支持</label>
+                                <input type="radio" name="2-2" data-value="单继承和多继承都支持">单继承和多继承都支持</label>
                             <label>
-                                <input type="radio" name="2-2">单继承和多继承都不支持</label>
+                                <input type="radio" name="2-2" data-value="单继承和多继承都不支持">单继承和多继承都不支持</label>
                         </div>
                     </li>
                 </ol>
@@ -97,31 +116,31 @@
         </section>
 
         <section>
-            <h3>多选题</h3>
+            <h3>多选题(每题10分，共20分)</h3>
             <div>
                 <ol>
                     <li>
-                        <div>
+                        <div id="checkbox-1">
                             <label>
-                                <input type="checkbox" name="tdd-example">4</label>
+                                <input type="checkbox" data-value="A">(A)概述级</label>
                             <label>
-                                <input type="checkbox" name="tdd-example">4</label>
+                                <input type="checkbox" data-value="B">(B)需求级</label>
                             <label>
-                                <input type="checkbox" name="tdd-example">4</label>
+                                <input type="checkbox" data-value="C">(C)用户目标级</label>
                             <label>
-                                <input type="checkbox" name="tdd-example">4</label>
+                                <input type="checkbox" data-value="D">(D)子功能级</label>
                         </div>
                     </li>
                     <li>
-                        <div>
+                        <div id="checkbox-2">
                             <label>
-                                <input type="checkbox" name="class-pic">4</label>
+                                <input type="checkbox" data-value="A">(A)概述级</label>
                             <label>
-                                <input type="checkbox" name="class-pic">4</label>
+                                <input type="checkbox" data-value="B">(B)需求级</label>
                             <label>
-                                <input type="checkbox" name="class-pic">4</label>
+                                <input type="checkbox" data-value="C">(C)用户目标级</label>
                             <label>
-                                <input type="checkbox" name="class-pic">4</label>
+                                <input type="checkbox" data-value="D">(D)子功能级</label>
                         </div>
                     </li>
                 </ol>
@@ -129,19 +148,21 @@
         </section>
 
         <section>
-            <h3>判断题</h3>
+            <h3>判断题(每题10分，共20分)</h3>
             <div>
                 <ol>
                     <li>
-                        <div>
-                            <input type="radio" name="radio-one">✔️
-                            <input type="radio" name="radio-one">❌
+                        <div id="judgement-1">
+                            <span>用例图只是用于和客户交流和沟通的，用于确定需求</span>
+                            <input type="radio" name="judgement-1" data-value="true">✔️
+                            <input type="radio" name="judgement-1" data-value="false">❌
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <input type="radio" name="radio-one">✔️
-                            <input type="radio" name="radio-one">❌
+                        <div id="judgement-2">
+                            <span>在状态图中，终止状态在一个状态图中允许任意多个</span>
+                            <input type="radio" name="judgement-2" data-value="true">✔️
+                            <input type="radio" name="judgement-2" data-value="false">❌
                         </div>
                     </li>
                 </ol>
@@ -149,7 +170,7 @@
         </section>
 
         <section>
-            <h3>简答题</h3>
+            <h3>简答题(每题20分，共20分)</h3>
             <div>
                 <ol>
                     <li>
@@ -157,7 +178,7 @@
                             <p>
                                 简述什么是模型以及模型的表现形式
                             </p>
-                            <textarea name="answer" id="answer" cols="120" rows="10" placeholder="模型是对世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体；可以使某种图形；或者是一种数学表达式。"></textarea>
+                            <textarea name="statement-1" id="statement-1" cols="120" rows="10" placeholder="模型是对世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体；可以使某种图形；或者是一种数学表达式。"></textarea>
                         </div>
                     </li>
                 </ol>
